@@ -7,6 +7,8 @@
 *.o
 *.so
 *.json
+*.txt
+*.gitignore
 
 # Packages #
 ############
