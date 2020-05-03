@@ -30,6 +30,8 @@ export class WebRequestService {
     return this.http.post(`${this.ROOT_URL}/users/login`, {
       email,
       password
-    }, { observe: 'response' });
+    }, { 
+      observe: 'response' 
+    });
   }
 }
