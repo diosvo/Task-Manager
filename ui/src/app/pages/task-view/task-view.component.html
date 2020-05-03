@@ -1,0 +1,40 @@
+<!-- Using Bulma's CSS -->
+<div class="centered-content">
+    <div class="task-manager-container">
+        <div class="side-bar has-background-white">
+            <h1 class="title has-text-primary">
+                Lists
+            </h1>
+            <div class="list-menu">
+                <a class="list-menu--item" *ngFor="let list of lists" [routerLink]="['/lists', list._id]"
+                    routerLinkActive="is-active">
+                    <p>{{list.title}}</p>
+                </a>
+            </div>
+            <button class="button is-primary has-text-white" routerLink="/new-list">+ New List</button>
+        </div>
+        <div class="task-list-container has-background-light">
+            <!-- Have a task  -->
+            <div *ngIf="tasks">
+                <h1 class="title has-text-primary">
+                    Tasks
+                </h1>
+                <!-- Task Elements -->
+                <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)"
+                    [ngClass]="{'completed': task.completed}">
+                    <p>{{task.title}}</p>
+                </div>
+
+                <h6 class="empty-state-text" *ngIf="tasks.length === 0">There are no task here. Click the add button to create a new task!</h6>
+
+                <button class="circle-add-button button is-primary" routerLink="./new-task">
+                    <img src="./assets/iconmonstr-plus-3.svg">
+                </button>
+            </div>
+
+            <div *ngIf="!tasks">
+                <h6 class="empty-state-text">Please select a list from sidebar</h6>
+            </div>
+        </div>
+    </div>
+</div>
