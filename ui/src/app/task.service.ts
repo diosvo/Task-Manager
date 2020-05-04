@@ -9,7 +9,7 @@ export class TaskService {
 
   constructor(private webReqService: WebRequestService) { }
 
-  //  === LIST
+  //  === LIST ====
 
   getLists() {
     return this.webReqService.get('lists');
@@ -19,7 +19,15 @@ export class TaskService {
     return this.webReqService.post('lists', { title });
   }
 
-  // === TASK 
+  editList(id: string, title: string) {
+    return this.webReqService.patch(`lists/${id}`, { title });
+  }
+
+  deleteList(id: string) {
+    return this.webReqService.delete(`lists/${id}`);
+  }
+
+  // === TASK ===
 
   getTasks(listId: string) {
     return this.webReqService.get(`lists/${listId}/tasks`);

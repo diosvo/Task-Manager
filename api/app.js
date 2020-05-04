@@ -135,7 +135,7 @@ app.patch('/lists/:id', authenticate, (req, res) => {
     List.findByIdAndUpdate({ _id: req.params.id, _userId: req.user_id }, {
         $set: req.body
     }).then(() => {
-        res.sendStatus(200);
+        res.send({'message': 'Successfully!'});
     });
 });
 
