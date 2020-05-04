@@ -87,6 +87,10 @@ UserSchema.statics.getJWTSecret = () => {
     return jwtSecret;
 }
 
+UserSchema.statics.getJWTSecret = () => {
+    return jwtSecret;
+}
+
 UserSchema.statics.findByIdAndToken = function (_id, token) {
     const User = this;
 
