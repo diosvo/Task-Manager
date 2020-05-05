@@ -75,7 +75,10 @@
         }
 
         .task {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             background   : white;
             border-radius: 8px;
 
@@ -92,12 +95,28 @@
 
                 &:hover {
                     box-shadow: 0 0 0 3px #eeeeee;
+
+                    .task--button {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
                 }
             }
 
-            &.completed {
+            &.completed .task--text {
                 text-decoration: line-through;
                 opacity        : 0.8;
+            }
+
+            .task--text {
+                display       : flex;
+                flex-grow: 1;
+            }
+
+            .task--button{
+                transition: opacity 0.2s, transform 0.2s;
+                transform: scale(0.8);
+                opacity: 0;
             }
         }
 

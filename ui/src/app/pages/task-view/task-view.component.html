@@ -44,7 +44,21 @@
                 <!-- Task Elements -->
                 <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)"
                     [ngClass]="{'completed': task.completed}">
-                    <p>{{task.title}}</p>
+                    <div class="task--text">
+                        <p>{{task.title}}</p>
+                    </div>
+                    <div class="task--button">
+                        <button class="button" style="margin-right: 0.5rem;">
+                            <div class="task--icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                        </button>
+                        <button class="button is-danger" (click)="onDeleteTaskClick(task._id)">
+                            <div class="task--icon">
+                                <i class="fas fa-trash"></i>
+                            </div>
+                        </button>
+                    </div>
                 </div>
 
                 <h6 class="empty-state-text" *ngIf="tasks.length === 0">There are no task here. Click the add button
