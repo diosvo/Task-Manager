@@ -19,13 +19,17 @@
                 </span>
             </p>
         </div>
-        <div class="field is-pulled-right">
+        <div class="field" style="display: flex; justify-content: flex-end;">
             <p class="control">
                 <button class="button is-primary has-text-white" (click)="onSignUpButtonClicked(emailInput.value,pwInput.value)">
                     Sign Up
                 </button>
             </p>
         </div>
+        <hr>
+        <p class="has-text-grey" style="display: flex; justify-content: center;">Already got an account?
+            <a routerLink="/login" style="margin: 0 5px;">Login</a><span>now!</span>
+        </p>
 
     </div>
 </div>

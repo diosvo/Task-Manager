@@ -8,7 +8,7 @@ $light-purple: #86A8E7;
 $family-sans-serif: "Nunito",
 sans-serif;
 $primary: $purple;
-$link   : $light-purple;
+$link   : $purple;
 
 // Update global component variables
 $control-border-width: 2px;
@@ -55,7 +55,3 @@ body {
     background: white;
     border-radius: 8px;
 }
-
-// .button {
-//     padding: 0 12px;
-// }
