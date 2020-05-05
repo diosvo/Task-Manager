@@ -1,6 +1,7 @@
 <!-- Using Bulma's CSS -->
 <div class="centered-content">
     <div class="task-manager-container">
+        <!-- List Elements  -->
         <div class="side-bar has-background-white">
             <h1 class="title has-text-primary">
                 Lists
@@ -67,7 +68,7 @@
                 <button class="circle-add-button button is-primary" routerLink="./new-task">
                     <img src="./assets/iconmonstr-plus-3.svg">
                 </button>
-
+                <!-- Not have any tasks  -->
                 <div *ngIf="!tasks">
                     <h6 class="empty-state-text">Please select a list from sidebar</h6>
                 </div>

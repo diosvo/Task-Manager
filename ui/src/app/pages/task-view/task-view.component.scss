@@ -8,7 +8,7 @@
         max-width : 800px;
         max-height: 500px;
     }
-    
+
     .side-bar {
         display       : flex;
         flex-direction: column;
@@ -52,7 +52,7 @@
     }
 
     .task-list-container {
-        position: relative;
+        position      : relative;
         display       : flex;
         flex-direction: column;
         flex-grow     : 1;
@@ -61,23 +61,25 @@
 
         border-top-right-radius   : 8px;
         border-bottom-right-radius: 8px;
-        
+
         .top-bar {
-            display: flex;
+            display      : flex;
             margin-bottom: 1rem;
-            .title{
+
+            .title {
                 flex-grow: 1;
-                margin: 0;
+                margin   : 0;
             }
+
             .button--hover {
                 margin-top: -0.5rem;
             }
         }
 
         .task {
-            display: flex;
+            display        : flex;
             justify-content: center;
-            align-items: center;
+            align-items    : center;
 
             background   : white;
             border-radius: 8px;
@@ -97,7 +99,7 @@
                     box-shadow: 0 0 0 3px #eeeeee;
 
                     .task--button {
-                        opacity: 1;
+                        opacity  : 1;
                         transform: scale(1);
                     }
                 }
@@ -109,35 +111,36 @@
             }
 
             .task--text {
-                display       : flex;
+                display  : flex;
                 flex-grow: 1;
             }
 
-            .task--button{
+            .task--button {
                 transition: opacity 0.2s, transform 0.2s;
-                transform: scale(0.8);
-                opacity: 0;
+                transform : scale(0.8);
+                opacity   : 0;
             }
         }
 
         .circle-add-button {
             position: absolute;
             bottom  : 3rem;
-            right: 3rem;
+            right   : 3rem;
 
             height: 2.75rem;
             width : 2.75rem;
 
-            border: none;
+            border       : none;
             border-radius: 50%;
+
             span {
-                font-size: 2rem; 
+                font-size: 2rem;
             }
         }
 
         .empty-state-text {
-            font-size: 14px;
-            color: #cccccc;
+            font-size : 14px;
+            color     : #cccccc;
             text-align: center;
         }
     }
